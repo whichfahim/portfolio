@@ -14,6 +14,46 @@ function Projects() {
       <h1 className="u-heading-secondary">My Work</h1>
       <div className="project-container">
         <div className="project-img-container">
+          <img src={blackjack} alt="glass cover" className="project-img" />
+        </div>
+
+        <div className="project-description">
+          <h4 className="project-heading u-text-color-primary">
+            Simple Blackjack game
+          </h4>
+          <p className="project-subheading">Personal</p>
+          <p>September 2024</p>
+          <ul>
+            <li>
+              Built a simple Blackjack game using <b>HTML</b> <b>CSS</b> and <b>JavaScript</b>.
+            </li>
+            <li>
+              Allow users to draw random cards and calculate points based on Blackjack rules.
+            </li>
+            <li>Implemented a full deck of 52 cards, each represented as JavaScript objects with <b>point values</b> and corresponding <b>image URLs</b>, using an <b>array data structure</b>.</li>
+            <li>Applied core front-end development skills, including DOM manipulation, event handling, and data management using JavaScript.</li>
+            <li><strong>Link to live app below:</strong></li>
+          </ul>
+          <div className="project-doc--icons-container">
+            <a href="https://github.com/whichfahim/blackjack-game" target="__blank">
+              <img
+                src={github}
+                className="project-doc--icon"
+                alt="github logo"
+              />
+            </a>
+            <a href="https://whichfahim.github.io/blackjack-game/" target="__blank">
+              <img
+                src={extLink}
+                className="project-doc--icon"
+                alt="external link icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="project-container">
+        <div className="project-img-container">
           <img src={geniotech} alt="geniotech cover" className="project-img" />
         </div>
 
@@ -25,24 +65,21 @@ function Projects() {
           <p>May 2023 - October 2024</p>
           <ul>
             <li>
-              Collaborated with a cross-functional team of four developers to
-              develop an e-learning platform.
+              Enhanced UI performance by 20% through the implementation of efficient HTML5 and ES6 code, improving load times across key pages.
             </li>
             <li>
-              Designed a high-fidelity mockup using Figma for UI/UX
-              visualization.
+              Created responsive web interfaces utilizing <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>ES6</strong>, and <strong>Python</strong> (Django)
             </li>
             <li>
-              Integrated WebRTC for video calling, screen sharing, and chat
+              Integrated <strong>WebRTC</strong> for video calling, screen sharing, and chat
               functionalities.
             </li>
             <li>
-              Implemented Square payment gateway using APIs to facilitate secure
+              Implemented <strong>Square</strong> payment gateway using APIs to facilitate secure
               transactions.
             </li>
             <li>
-              Utilized Django, Python, HTML, CSS, Bootstrap, and JavaScript for
-              development.
+              Improved user satisfaction scores by 10% after incorporating feedback from testers and clients to optimize interface design and functionality.
             </li>
           </ul>
           <div className="project-doc--icons-container">
@@ -83,16 +120,13 @@ function Projects() {
           <p>May 2023 - October 2024</p>
           <ul>
             <li>
-              Spearheaded the redesign of the company's employee assessment
-              application, enhancing usability and design.
+              Reduced UI navigation time by 30%, streamlining workflows for over 200 employees in the evaluation application.
             </li>
             <li>
-              Streamlined application navigation by reducing the number of pages
-              required for user interaction.
+              Contributed to the successful launch of of 5+ web applications.
             </li>
             <li>
-              Utilized React, JavaScript, HTML, CSS, Bootstrap, and ReactQuery
-              for REST API integration.
+              Utilized <strong>React</strong>, <strong>JavaScript</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>Bootstrap</strong>, and <strong>ReactQuery</strong> for REST API integration.
             </li>
             <li>
               Incorporated feedback from Business Analysts (BA), Quality
@@ -111,20 +145,7 @@ function Projects() {
             >
               <img src={figma} className="project-doc--icon" alt="figma icon" />
             </a>
-            {/* <a href="#" target="__blank">
-              <img
-                src={behance}
-                className="project-doc--icon"
-                alt="behance logo"
-              />
-            </a>
-            <a href="#" target="__blank">
-              <img
-                src={github}
-                className="project-doc--icon"
-                alt="github logo"
-              />
-            </a> */}
+
           </div>
         </div>
       </div>
@@ -146,11 +167,11 @@ function Projects() {
             </li>
             <li>
               Produced wireframes and progressed through low-fidelity to
-              high-fidelity mockups in Figma.
+              high-fidelity mockups in <strong>Figma</strong>.
             </li>
-            <li>Implemented development using HTML, CSS, SASS, and JS.</li>
+            <li>Implemented development using <strong>HTML</strong> , <strong>CSS</strong>, <strong>SASS</strong>, and <strong>JS</strong>.</li>
             <li>Ensured design responsiveness across all screen sizes.</li>
-            <li>Link to demo on Github: Glass Cosmetics Redesign</li>
+            <li>Link to demo below:</li>
           </ul>
           <div className="project-doc--icons-container">
             {/* <a href="#" target="__blank">
@@ -166,47 +187,14 @@ function Projects() {
                 alt="behance logo"
               />
             </a>
+            <a href="https://github.com/whichfahim/glass" target="__blank">
+              <img
+                src={github}
+                className="project-doc--icon"
+                alt="github logo"
+              />
+            </a>
             <a href="https://whichfahim.github.io/glass/" target="__blank">
-              <img
-                src={github}
-                className="project-doc--icon"
-                alt="github logo"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="project-container">
-        <div className="project-img-container">
-          <img src={blackjack} alt="glass cover" className="project-img" />
-        </div>
-
-        <div className="project-description">
-          <h4 className="project-heading u-text-color-primary">
-            Simple Blackjack game
-          </h4>
-          <p className="project-subheading">Personal</p>
-          <p>September 2024</p>
-          <ul>
-            <li>
-              Built a simple Blackjack game using <b>HTML</b> <b>CSS</b> and <b>JavaScript</b>.
-            </li>
-            <li>
-              Allow users to draw random cards and calculate points based on Blackjack rules.
-            </li>
-            <li>Implemented a full deck of 52 cards, each represented as JavaScript objects with <b>point values</b> and corresponding <b>image URLs</b>, using an <b>array data structure</b>.</li>
-            <li>Applied core front-end development skills, including DOM manipulation, event handling, and data management using JavaScript.</li>
-            <li><strong>Link to live app below:</strong></li>
-          </ul>
-          <div className="project-doc--icons-container">
-            <a href="https://github.com/whichfahim/blackjack-game" target="__blank">
-              <img
-                src={github}
-                className="project-doc--icon"
-                alt="github logo"
-              />
-            </a>
-            <a href="https://whichfahim.github.io/blackjack-game/" target="__blank">
               <img
                 src={extLink}
                 className="project-doc--icon"
@@ -216,6 +204,7 @@ function Projects() {
           </div>
         </div>
       </div>
+
     </section>
   );
 }
