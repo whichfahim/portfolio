@@ -196,7 +196,7 @@ function Projects() {
             </li>
             <li>Implemented a full deck of 52 cards, each represented as JavaScript objects with <b>point values</b> and corresponding <b>image URLs</b>, using an <b>array data structure</b>.</li>
             <li>Applied core front-end development skills, including DOM manipulation, event handling, and data management using JavaScript.</li>
-            <li><strong>Link to live app below:</strong>.</li>
+            <li><strong>Link to live app below:</strong></li>
           </ul>
           <div className="project-doc--icons-container">
             <a href="https://github.com/whichfahim/blackjack-game" target="__blank">
