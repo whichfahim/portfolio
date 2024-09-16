@@ -8,6 +8,7 @@ import geniotech from "../assets/img/geniotech.png";
 import backtoplay from "../assets/img/backtoplay.png";
 import glasscosmetics from "../assets/img/glasscosmetics.png";
 
+
 function Projects() {
   return (
     <section className="section-projects" id="projects">

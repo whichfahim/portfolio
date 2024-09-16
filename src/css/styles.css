@@ -154,6 +154,11 @@ body {
     .section-header {
       height: 50vh; } }
 
+.cover-video {
+  width: 100%;
+  object-fit: cover;
+  opacity: 50%; }
+
 .heading-container {
   color: white;
   position: absolute;

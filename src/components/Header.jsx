@@ -2,7 +2,8 @@ import behance from "../assets/icons/Behance.png";
 import dribbble from "../assets/icons/Dribbble.png";
 import linkedin from "../assets/icons/LinkedIn.png";
 import github from "../assets/icons/Github.png";
-
+import coverVdo from "../assets/video/2439510-hd_1920_1080_30fps.mp4"
+import Navbar from "./Navbar.jsx";
         // function play() {
         //   console.log("btn-clicked!")
         //   var audio = document.getElementById("audio");
@@ -12,7 +13,12 @@ import github from "../assets/icons/Github.png";
 function Header() {
   return (
     <section className="section-header">
-
+      <Navbar />
+      <video autoPlay muted loop className="cover-video"  >
+        <source src={coverVdo} type="video/mp4" className="coverVdo"/>
+        {/*<source src={coverVdo} type="video/ogg" className="coverVdo"/>*/}
+      Your browser does not support the video tag.
+      </video>
       <div className="heading-container">
         <p className="heading-super">Hi, my name is</p>
         <h1 className="heading-main--title">Fahim Imtiaz</h1>
