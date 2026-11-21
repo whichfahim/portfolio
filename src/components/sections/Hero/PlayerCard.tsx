@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { InlineEdit } from '@/components/ui';
+import { InlineEdit, TypewriterText } from '@/components/ui';
 import { profile } from '@/data/profile';
 import styles from './PlayerCard.module.css';
 
@@ -12,7 +12,6 @@ const INITIAL_FIELDS: Fields = {
   class: profile.role,
   base: profile.city,
   equipped: profile.equipped,
-  status: 'open_to_remote',
 };
 
 const isEdited = (fields: Fields) => JSON.stringify(fields) !== JSON.stringify(INITIAL_FIELDS);
@@ -20,7 +19,8 @@ const isEdited = (fields: Fields) => JSON.stringify(fields) !== JSON.stringify(I
 /**
  * A code-editor style "player.json" card. Every string value is an inline input,
  * so visitors can rewrite the character sheet for fun. Edits live in component
- * state only and reset on reload.
+ * state only and reset on reload. The "status" line isn't editable: it types
+ * out each value in `profile.statusCycle` in turn.
  */
 export function PlayerCard() {
   const [fields, setFields] = useState<Fields>(INITIAL_FIELDS);
@@ -74,9 +74,8 @@ export function PlayerCard() {
           {'// click any value to edit'}
         </div>
         <div>{'{'}</div>
-        {keys.map((key, i) => {
+        {keys.map((key) => {
           const value = fields[key];
-          const comma = i < keys.length - 1 ? ',' : '';
           return (
             <div key={key} className={styles.line}>
               {'  '}"{key}":{' '}
@@ -94,10 +93,21 @@ export function PlayerCard() {
               ) : (
                 renderString(key, value)
               )}
-              {comma}
+              {/* Every editable field is followed by the status line, so each needs a comma. */},
             </div>
           );
         })}
+        <div className={styles.line}>
+          {'  '}"status":{' '}
+          <span className={styles.string}>
+            "
+            <TypewriterText
+              words={profile.statusCycle}
+              accessibleText={profile.statusCycle[0]}
+            />
+            "
+          </span>
+        </div>
         <div>{'}'}</div>
       </div>
     </figure>

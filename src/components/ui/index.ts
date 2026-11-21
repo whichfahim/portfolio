@@ -15,3 +15,4 @@ export { PixelGrid } from './PixelGrid/PixelGrid';
 export { PALETTE_ICON, PLAYER_AVATAR } from './PixelGrid/pixelMaps';
 export { ScrollFillText } from './ScrollFillText/ScrollFillText';
 export { InlineEdit } from './InlineEdit/InlineEdit';
+export { TypewriterText } from './TypewriterText/TypewriterText';
