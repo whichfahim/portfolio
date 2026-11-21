@@ -1,0 +1,159 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  /* Hidden (and out of the tab order) until opened; the delay lets the slide-out finish first. */
+  visibility: hidden;
+  transition: visibility 0s linear 0.35s;
+}
+
+.open {
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.open .backdrop {
+  opacity: 1;
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: min(300px, 84vw);
+  padding: 16px 16px 24px;
+  overflow-y: auto;
+  border-left: 2px solid var(--ink);
+  background: var(--surface);
+  box-shadow: -6px 0 0 var(--ink);
+  transform: translateX(calc(100% + 8px));
+  transition: transform 0.35s var(--ease-out);
+}
+
+.open .panel {
+  transform: translateX(0);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  color: var(--muted);
+  font-family: var(--font-pixel);
+  font-size: 12px;
+}
+
+.close {
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--ink);
+  background: var(--alt);
+  color: var(--ink);
+  font-family: var(--font-pixel);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 52px;
+  padding: 0 16px;
+  border: 2px solid var(--ink);
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--ink);
+  font-family: var(--font-pixel);
+  font-size: 14px;
+  text-decoration: none;
+  transition:
+    transform 0.2s var(--ease-out),
+    box-shadow 0.2s var(--ease-out);
+}
+
+.link:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+.linkNumber {
+  color: var(--accent);
+  font-size: 11px;
+}
+
+.theme {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+  padding: 8px 14px 8px 8px;
+  border: 2px solid var(--ink);
+  background: var(--alt);
+  box-shadow: 4px 4px 0 var(--ink);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.2s var(--ease-out),
+    box-shadow 0.2s var(--ease-out);
+}
+
+.theme:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+.themeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 2px solid var(--ink);
+  background: var(--surface);
+}
+
+.themeText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  font-family: var(--font-pixel);
+  font-size: 14px;
+}
+
+.themeLabel {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.themeNext {
+  color: var(--accent);
+  font-family: var(--font-pixel);
+  font-size: 10px;
+}

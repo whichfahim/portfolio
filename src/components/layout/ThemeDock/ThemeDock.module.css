@@ -81,9 +81,9 @@
   font-size: 7px;
 }
 
+/* On small screens the theme switcher lives in the header's menu instead (keep in sync with MOBILE_QUERY). */
 @media (max-width: 640px) {
   .dock {
-    right: 12px;
-    bottom: 12px;
+    display: none;
   }
 }

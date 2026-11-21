@@ -69,6 +69,7 @@
 
 .string {
   color: var(--dark-accent);
+  white-space: nowrap; /* keep each value and its quotes together when lines wrap */
 }
 
 @keyframes pop-in {

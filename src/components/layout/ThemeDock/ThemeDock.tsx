@@ -1,16 +1,11 @@
 import { PALETTE_ICON, PixelGrid } from '@/components/ui';
-import type { Theme } from '@/theme/themes';
+import { paletteIconColors } from '@/theme/paletteIcon';
 import { useTheme } from '@/theme/useTheme';
 import { cx } from '@/utils/cx';
 import styles from './ThemeDock.module.css';
 
 /** Width of one icon button plus the gap between buttons, in px. Keep in sync with the CSS. */
 const STEP = 60;
-
-function paletteColors(theme: Theme, outline: string) {
-  const t = theme.tokens;
-  return { X: outline, S: t.surface, A: t.accent, B: t.darkAccent, C: t.paintA, D: t.paintB };
-}
 
 /**
  * Floating theme switcher, pinned bottom-right. Each theme is a pixel palette icon
@@ -39,7 +34,7 @@ export function ThemeDock() {
               className={cx(styles.option, selected && styles.selected)}
               onClick={() => setThemeId(theme.id)}
             >
-              <PixelGrid map={PALETTE_ICON} colors={paletteColors(theme, active.tokens.ink)} pixelSize={3} />
+              <PixelGrid map={PALETTE_ICON} colors={paletteIconColors(theme, active.tokens.ink)} pixelSize={3} />
             </button>
           );
         })}
