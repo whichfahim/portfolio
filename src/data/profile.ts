@@ -25,9 +25,9 @@ export const profile = {
 
 /**
  * Contact links shown in the Save point section.
- * Add your Upwork profile URL to show the "Hire me on Upwork" button.
+ * Leave UPWORK_URL empty to hide the "Hire me on Upwork" button.
  */
-const UPWORK_URL = '';
+const UPWORK_URL = 'https://www.upwork.com/freelancers/~01782abb3d7ed27458';
 
 export const contactLinks: LinkItem[] = [
   ...(UPWORK_URL ? [{ label: 'Hire me on Upwork', href: UPWORK_URL, variant: 'primary' as const }] : []),
