@@ -1,0 +1,212 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  /* Hidden (and out of the tab order) until opened; the delay lets the slide-out finish first. */
+  visibility: hidden;
+  transition: visibility 0s linear 0.35s;
+}
+
+.open {
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.open .backdrop {
+  opacity: 1;
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: min(300px, 84vw);
+  padding: 16px 16px 24px;
+  overflow-y: auto;
+  border-left: 2px solid var(--ink);
+  background: var(--surface);
+  box-shadow: -6px 0 0 var(--ink);
+  transform: translateX(calc(100% + 8px));
+  transition: transform 0.35s var(--ease-out);
+}
+
+.open .panel {
+  transform: translateX(0);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  color: var(--muted);
+  font-family: var(--font-pixel);
+  font-size: 12px;
+}
+
+.close {
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--ink);
+  background: var(--alt);
+  color: var(--ink);
+  font-family: var(--font-pixel);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 52px;
+  padding: 0 16px;
+  border: 2px solid var(--ink);
+  background: var(--surface);
+  box-shadow: 4px 4px 0 var(--ink);
+  font-family: var(--font-pixel);
+  font-size: 14px;
+  text-decoration: none;
+  transition:
+    transform 0.2s var(--ease-out),
+    box-shadow 0.2s var(--ease-out);
+}
+
+.link:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+.linkNumber {
+  color: var(--accent);
+  font-size: 11px;
+}
+
+.theme {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.themeLegend {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-family: var(--font-pixel);
+  font-size: 12px;
+}
+
+.themeLabel {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* Three equal stops on a rail; --stop (0, 1 or 2) says where the knob sits. */
+.switch {
+  --track: 48px;
+  --inset: 4px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.rail {
+  position: absolute;
+  inset: 0 0 auto;
+  height: var(--track);
+  border: 2px solid var(--ink);
+  background: var(--alt);
+  box-shadow: inset 3px 3px 0 var(--line);
+}
+
+.knob {
+  position: absolute;
+  top: var(--inset);
+  left: calc(var(--stop) * 100% / 3 + var(--inset));
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 3 - 2 * var(--inset));
+  height: calc(var(--track) - 2 * var(--inset));
+  border: 2px solid var(--ink);
+  background: var(--surface);
+  box-shadow: 3px 3px 0 var(--ink);
+  pointer-events: none;
+  transition: left 0.3s var(--ease-out);
+}
+
+.stop {
+  position: relative; /* paint the stops above the rail */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.stopCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: var(--track);
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--ink);
+}
+
+.stopName {
+  color: var(--muted);
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  transition: color 0.2s var(--ease-out);
+}
+
+.stop:has(input:checked) .stopName {
+  color: var(--ink);
+}
+
+.stop:has(input:focus-visible) .stopCell {
+  outline: 2px solid var(--accent);
+  outline-offset: -6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .knob {
+    transition: none;
+  }
+}

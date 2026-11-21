@@ -9,15 +9,16 @@ interface XPBarProps {
   size?: 'sm' | 'md';
   /** Accessible description, e.g. "Page scroll progress". */
   ariaLabel: string;
+  className?: string;
 }
 
 /** A segmented pixel progress bar. */
-export function XPBar({ value, label = 'XP', cells = 10, size = 'sm', ariaLabel }: XPBarProps) {
+export function XPBar({ value, label = 'XP', cells = 10, size = 'sm', ariaLabel, className }: XPBarProps) {
   const filled = Math.round(Math.min(1, Math.max(0, value)) * cells);
   const percent = Math.round(value * 100);
 
   return (
-    <div className={cx(styles.wrap, styles[size])}>
+    <div className={cx(styles.wrap, styles[size], className)}>
       <span className={styles.label} aria-hidden="true">
         {label}
       </span>

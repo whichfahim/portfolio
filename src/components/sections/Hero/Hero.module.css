@@ -65,3 +65,22 @@
   flex-wrap: wrap;
   gap: 16px;
 }
+
+/* Phone widths: smaller heading so "/ENGINEER" fits on one line. */
+@media (max-width: 640px) {
+  .hero {
+    padding-block: 64px 80px;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .lower {
+    margin-top: 40px;
+  }
+
+  .lead {
+    font-size: 18px;
+  }
+}
