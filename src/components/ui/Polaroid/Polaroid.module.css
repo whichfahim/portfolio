@@ -1,0 +1,39 @@
+.polaroid {
+  width: 100%;
+  max-width: 260px;
+  margin: 0;
+  /* Classic instant-photo proportions: equal sides and top, a deeper bottom for the caption. */
+  padding: 12px 12px 0;
+  border: 2px solid var(--ink);
+  background: #fbfaf7;
+  box-shadow: 5px 5px 0 var(--ink);
+  transform: rotate(var(--tilt, -2deg));
+  transition:
+    transform 0.4s var(--ease-spring),
+    box-shadow 0.3s ease;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) translateY(-3px);
+  box-shadow: 7px 7px 0 var(--ink);
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.pixelated {
+  image-rendering: pixelated;
+}
+
+/* The frame is always paper-white, so the caption uses fixed dark ink in every theme. */
+.caption {
+  padding: 14px 4px 16px;
+  color: #2b2926;
+  font-family: var(--font-pixel);
+  font-size: 12px;
+  text-align: center;
+}
