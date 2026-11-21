@@ -1,8 +1,0 @@
-.grid {
-  display: inline-grid;
-  flex-shrink: 0;
-}
-
-.grid > span {
-  transition: background-color var(--theme-fade);
-}
