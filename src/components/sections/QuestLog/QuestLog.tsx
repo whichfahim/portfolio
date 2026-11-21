@@ -1,11 +1,11 @@
-import { SectionLabel } from '@/components/ui';
-import { Container } from '@/components/layout';
-import { SECTION_IDS } from '@/data/navigation';
-import { profile } from '@/data/profile';
-import { questLog } from '@/data/questLog';
-import { PlayerStats } from './PlayerStats';
-import { Timeline } from './Timeline';
-import styles from './QuestLog.module.css';
+import { SectionLabel } from "@/components/ui";
+import { Container } from "@/components/layout";
+import { SECTION_IDS } from "@/data/navigation";
+import { profile } from "@/data/profile";
+import { questLog } from "@/data/questLog";
+import { PlayerStats } from "./PlayerStats";
+import { Timeline } from "./Timeline";
+import styles from "./QuestLog.module.css";
 
 export function QuestLog() {
   return (
@@ -15,7 +15,7 @@ export function QuestLog() {
         <div className={styles.content}>
           <SectionLabel level={4} title="Quest log" />
           <h2 id="quest-log-title" className={styles.title}>
-            Half designer, half engineer, fully obsessed with the handoff.
+            Design 🤝 Development
           </h2>
           <p className={styles.lead}>{profile.lookingFor}</p>
           <Timeline entries={questLog} />

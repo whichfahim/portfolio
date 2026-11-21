@@ -1,16 +1,21 @@
-import { LinkButtons, PixelButton, SectionLabel } from '@/components/ui';
-import { Section } from '@/components/layout';
-import { SECTION_IDS } from '@/data/navigation';
-import { contactLinks, profile } from '@/data/profile';
-import styles from './Contact.module.css';
+import { LinkButtons, PixelButton, SectionLabel } from "@/components/ui";
+import { Section } from "@/components/layout";
+import { SECTION_IDS } from "@/data/navigation";
+import { contactLinks, profile } from "@/data/profile";
+import styles from "./Contact.module.css";
 
 export function Contact() {
   return (
-    <Section id={SECTION_IDS.contact} ruled labelledBy="contact-title" className={styles.section}>
+    <Section
+      id={SECTION_IDS.contact}
+      ruled
+      labelledBy="contact-title"
+      className={styles.section}
+    >
       <SectionLabel level={5} title="Save point" />
       <h2 id="contact-title" className={styles.heading}>
         <a href={`mailto:${profile.email}`} className={styles.mail}>
-          Say hi{' '}
+          Let's work together!{" "}
           <span className={styles.arrow} aria-hidden="true">
             →
           </span>
