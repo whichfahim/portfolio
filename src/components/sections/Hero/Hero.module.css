@@ -66,7 +66,7 @@
   gap: 16px;
 }
 
-/* Small screens (keep in sync with MOBILE_QUERY): smaller heading so "Engineer" fits on one line. */
+/* Phone widths: smaller heading so "/ENGINEER" fits on one line. */
 @media (max-width: 640px) {
   .hero {
     padding-block: 64px 80px;

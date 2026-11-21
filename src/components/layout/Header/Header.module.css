@@ -103,10 +103,10 @@
 }
 
 /*
- * Small screens (keep in sync with MOBILE_QUERY in src/styles/breakpoints.ts):
+ * Compact header below 740px (keep in sync with MOBILE_QUERY in src/styles/breakpoints.ts):
  * three columns — logo + clock | XP bar centred | burger. Links move into the menu.
  */
-@media (max-width: 640px) {
+@media (max-width: 739px) {
   .sticky {
     top: 10px;
     padding-top: 10px;
