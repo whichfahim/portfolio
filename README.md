@@ -12,7 +12,7 @@ Built with **React 18**, **TypeScript** and **Vite**, styled with **CSS Modules*
 - **Side quests:** five smaller projects, each with a one-line plain-language summary, including a Figma-design vs live-build comparison.
 - **Case study pages:** a full write-up for Geniotech at `#/work/geniotech`, covering problem, process, build, key decisions and outcome.
 - **Three themes:** Paper, Arcade and Amber, picked from a floating theme dock with pixel-art palette icons. The choice is saved in `localStorage`.
-- **Quest UI Kit:** reusable pixel components (buttons with press states, accordions, XP bars, badges, code tags, pixel art) in `src/components/ui`.
+- **Quest UI Kit:** reusable pixel components (buttons with press states, accordions, XP bars, badges, code tags, pixel art, an editable inline input, a typewriter and a polaroid photo frame) in `src/components/ui`.
 - **Small touches:** a live Dhaka clock, an XP bar that tracks scroll progress, a scroll-fill paragraph, a skills marquee and a career timeline.
 - **Accessibility:** semantic landmarks, real buttons and links, `aria-expanded` accordions, a radio-group theme picker, a skip link, visible focus styles, and full support for `prefers-reduced-motion`.
 
@@ -75,6 +75,7 @@ All copy, links and images live in `src/data`, so you rarely need to touch compo
 | To change…                         | Edit                                  |
 | ---------------------------------- | ------------------------------------- |
 | Name, intro, email, availability   | `src/data/profile.ts`                 |
+| Player card portrait and caption   | `avatar` in `src/data/profile.ts` (image in `src/assets/images/profile/`) |
 | Contact buttons and Upwork link    | `contactLinks` and `UPWORK_URL` in `src/data/profile.ts` |
 | Case studies on the home page      | `src/data/mainQuests.ts`              |
 | Side projects                      | `src/data/sideQuests.ts`              |

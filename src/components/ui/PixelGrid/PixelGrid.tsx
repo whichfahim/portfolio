@@ -10,7 +10,7 @@ interface PixelGridProps {
   label?: string;
 }
 
-/** Renders pixel art from a text map. Used for the palette icons and the player avatar. */
+/** Renders pixel art from a text map. Used for the theme dock's palette icons. */
 export function PixelGrid({ map, colors, pixelSize = 3, label }: PixelGridProps) {
   const columns = map[0]?.length ?? 0;
   const a11y = label ? { role: 'img', 'aria-label': label } : { 'aria-hidden': true };

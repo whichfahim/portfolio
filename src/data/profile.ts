@@ -1,4 +1,5 @@
 import type { LinkItem } from '@/types/content';
+import avatarImage from '@/assets/images/profile/fahim-pixel.png';
 
 /** Personal details and contact links. Edit here to update the whole site. */
 export const profile = {
@@ -12,6 +13,12 @@ export const profile = {
   email: 'fahim.imtiaz07@gmail.com',
   availability: 'Open to remote + contract',
   guild: 'FiftyTwo Digital',
+  /** 64×64 pixel-art portrait, shown in a polaroid frame in the Quest log. */
+  avatar: {
+    src: avatarImage,
+    alt: 'Pixel-art portrait of Fahim Imtiaz',
+    caption: 'Player 1 · Fahim',
+  },
   intro:
     'I design in Figma and ship in React — so nothing gets lost in the handoff. Interfaces, design systems and the small interactions that make them feel considered.',
   approach:

@@ -19,17 +19,3 @@ export const PALETTE_ICON = [
   '....XXX.....',
 ] as const;
 
-/** A smiling computer for the player card. 12 × 11. */
-export const PLAYER_AVATAR = [
-  '..XXXXXXXX..',
-  '.XSSSSSSSSX.',
-  '.XSAASSAASX.',
-  '.XSAASSAASX.',
-  '.XSSSSSSSSX.',
-  '.XSASSSSASX.',
-  '.XSSAAAASSX.',
-  '.XSSSSSSSSX.',
-  '..XXXXXXXX..',
-  '....XXXX....',
-  '..XXXXXXXX..',
-] as const;
