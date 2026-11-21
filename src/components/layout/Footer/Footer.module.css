@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 32px 112px; /* extra bottom space so the theme dock never covers it */
+  border-top: 2px solid var(--line);
+  color: var(--muted);
+  font-family: var(--font-pixel);
+  font-size: 12px;
+}

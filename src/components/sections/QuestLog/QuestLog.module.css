@@ -1,0 +1,30 @@
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 64px;
+  padding-block: var(--section-space);
+}
+
+.content {
+  flex: 999 1 560px;
+  min-width: 0;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-family: var(--font-display);
+  font-stretch: 110%;
+  font-weight: 700;
+  font-size: clamp(32px, 3.6vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  max-width: 640px;
+  margin-bottom: 48px;
+  color: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+}

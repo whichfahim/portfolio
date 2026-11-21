@@ -1,0 +1,49 @@
+.section {
+  padding-top: var(--section-space);
+}
+
+.title {
+  margin-bottom: 32px;
+  color: var(--accent);
+  font-family: var(--font-pixel);
+  font-size: 14px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex: 1 1 300px;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+  padding: 28px;
+  border: 2px solid var(--ink);
+  background: var(--surface);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.number {
+  color: var(--accent);
+  font-family: var(--font-pixel);
+  font-size: 28px;
+  line-height: 1;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.body {
+  color: var(--body);
+  font-size: 15px;
+  line-height: 1.6;
+}
