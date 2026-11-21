@@ -1,0 +1,21 @@
+.panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 24px 20px 28px;
+}
+
+.details {
+  display: flex;
+  flex: 1 1 300px;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.description {
+  color: var(--dark-muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
