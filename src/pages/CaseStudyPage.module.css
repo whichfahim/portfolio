@@ -1,0 +1,71 @@
+.page {
+  padding-bottom: 40px;
+}
+
+.topBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 40px;
+}
+
+.questTag {
+  color: var(--muted);
+  font-family: var(--font-pixel);
+  font-size: 12px;
+}
+
+.hero {
+  margin: 0;
+}
+
+.hero img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 2px solid var(--ink);
+  background: #ffffff;
+  box-shadow: 6px 6px 0 var(--ink);
+  object-fit: cover;
+  object-position: top;
+}
+
+.hero figcaption {
+  margin-top: 16px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.next {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 80px;
+  padding-top: 32px;
+  border-top: 2px solid var(--ink);
+  text-decoration: none;
+}
+
+.nextLabel {
+  color: var(--muted);
+  font-family: var(--font-pixel);
+  font-size: 13px;
+}
+
+.nextTitle {
+  font-family: var(--font-display);
+  font-stretch: 125%;
+  font-weight: 800;
+  font-size: clamp(32px, 4.6vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.nextTitle span {
+  color: var(--accent);
+}

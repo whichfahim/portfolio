@@ -1,0 +1,36 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.number {
+  color: var(--accent);
+  font-family: var(--font-pixel);
+  font-size: 14px;
+}
+
+.titles {
+  display: flex;
+  flex: 1 1 280px;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.summary {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.status {
+  color: var(--muted);
+  font-family: var(--font-pixel);
+  font-size: 11px;
+}
