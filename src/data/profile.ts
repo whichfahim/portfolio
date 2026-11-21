@@ -22,7 +22,7 @@ export const profile = {
   intro:
     "Hiya, I'm your friendly neighbourhood jack-of-all-trades: UI/UX designer, front-end engineer, branding specialist, and interaction designer. I like building cool things for the web and solving intriguing problems.",
   approach:
-    "I can take a design from mockup to production, and a concept from idea to implementation. I like to think of myself as a bridge between design and development, and I enjoy working on projects that lets me work on both sides.",
+    "I can take a design from mockup to production, and a concept from idea to implementation. I like to think of myself as a bridge between design and development, and I enjoy working on projects that let me work on both sides.",
   /** The word in `approach` that gets the accent colour when the scroll-fill reaches it. */
   approachHighlight: "bridge",
   equipped: ["Figma", "React", "TypeScript"],
