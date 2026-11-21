@@ -19,6 +19,14 @@ export const profile = {
   /** The word in `approach` that gets the accent colour when the scroll-fill reaches it. */
   approachHighlight: 'considered.',
   equipped: ['Figma', 'React', 'TypeScript'],
+  /** Values the hero card's "status" field types out in turn. */
+  statusCycle: [
+    'looking_for_party',
+    'accepting_quests',
+    'player_2_wanted',
+    'open_to_remote_and_contract',
+    'lvl_up_in_progress',
+  ],
   lookingFor: 'Looking for design engineer, UI engineer and design systems roles, remote or contract.',
   resumeUrl: `${import.meta.env.BASE_URL}resume.pdf`,
 };
